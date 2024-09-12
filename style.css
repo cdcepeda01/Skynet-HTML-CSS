@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bruno Ace SC", sans-serif;
+}
+
+body{
+    background: #020202;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 30px;
+    color: #bd0000;
+    text-decoration: none;
+    font-weight: ;
+}
+
+.barraNavegacion a {
+    font-size: 18px;
+    color: #bd0000;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+}
+
+.barraNavegacion a:hover{
+    color: #ffffff;
+}
+
+.inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+
+.inicio-contenido{
+    color: #ffffff;
+    max-width: 650px;
+}
+.inicio-contenido h1{
+    color: #bd0000;
+    font-size: 30px;
+    line-height: 1.2;
+}
+.inicio-contenido h3{
+    color: #ffffff;
+    font-size: 20px;
+}
+.inicio-contenido p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: #bd0000;
+    border: 2px solid #bd0000;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #020202;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #bd0000;
+}
+.inicio-img{
+    position: relative;
+    right: -7%;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+}
+.inicio-img .rombo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    border: 25px solid #bd0000;
+}
+.inicio-img .rombo img {
+    position: absolute;
+    top: -100px;
+    left: -37px;
+    max-width: 550px;
+    transform: rotate(-45deg);
+
+}
+.home .rombo2{
+    
+}
