@@ -27,16 +27,24 @@ body{
     font-size: 30px;
     color: #bd0000;
     text-decoration: none;
-    font-weight: ;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
 }
 
 .barraNavegacion a {
+    display: inline-block;
     font-size: 18px;
     color: #bd0000;
     text-decoration: none;
     font-weight: 500;
     margin: 0 20px;
     transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
 }
 
 .barraNavegacion a:hover{
@@ -103,6 +111,7 @@ body{
     height: 100%;
     background: #000000;
     border: 25px solid #bd0000;
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
 }
 .inicio-img .rombo img {
     position: absolute;
@@ -112,7 +121,19 @@ body{
     transform: rotate(-45deg);
 
 }
-.home .rombo2{
+.inicio .rombo2{
+    position:absolute;
+    top: -25%;
+    right: -25%;
+    width: 700px;
+    height: 700px;
+    background-color: #bd0000;
+    transform: rotate(45deg);
+    z-index: -1;
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
+
+
+
     
 }
 .nosotros {
@@ -134,4 +155,28 @@ body{
     color: #ffffff;
     font-size: 16px;
     margin: 15px 0 30px;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+   
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+   
 }
