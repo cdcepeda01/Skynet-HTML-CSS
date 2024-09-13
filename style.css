@@ -51,6 +51,38 @@ body{
     color: #ffffff;
 }
 
+.redes-sociales{ 
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+
+.redes-sociales a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transform: rotate(45deg);
+    transition: .5s;
+    opacity: 0;
+    animation: slideSci .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.redes-sociales a:hover {
+    border-color: #ffffff;
+}
+.redes-sociales a i{
+    font-size: 24px;
+    color: #ffffff;
+    transform: rotate(-45deg);
+
+}
+
 .inicio {
     position: relative;
     width: 100%;
@@ -70,14 +102,23 @@ body{
     color: #bd0000;
     font-size: 30px;
     line-height: 1.2;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
 }
 .inicio-contenido h3{
     color: #ffffff;
     font-size: 20px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
 }
 .inicio-contenido p {
     font-size: 16px;
     margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
 }
 .btn {
     display: inline-block;
@@ -92,7 +133,11 @@ body{
     text-decoration: none;
     font-weight: 600;
     transition: .5s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
 }
+
 
 .btn:hover {
     background: transparent;
@@ -112,13 +157,18 @@ body{
     background: #000000;
     border: 25px solid #bd0000;
     box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 1.6s;
 }
+
 .inicio-img .rombo img {
     position: absolute;
     top: -100px;
     left: -37px;
     max-width: 550px;
     transform: rotate(-45deg);
+    animation-delay: 2s;
 
 }
 .inicio .rombo2{
@@ -131,7 +181,8 @@ body{
     transform: rotate(45deg);
     z-index: -1;
     box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
-
+    animation: rombo2 1s ease forwards;
+    
 
 
     
@@ -169,13 +220,72 @@ body{
    
 }
 
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+   
+}
+
 @keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+   
+}
+@keyframes slideBottom {
     0% {
         transform: translateY(-100px);
         opacity: 0;
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+   
+}
+@keyframes slideSci {
+    0% {
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+   
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+   
+}
+
+
+@keyframes rombo2 {
+    0% {
+        right: -40%;
+        opacity: 0;
+    }
+    100% {
+        right: -25%;
         opacity: 1;
     }
    
