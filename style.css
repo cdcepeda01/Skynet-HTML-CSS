@@ -70,14 +70,23 @@ body{
     color: #bd0000;
     font-size: 30px;
     line-height: 1.2;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
 }
 .inicio-contenido h3{
     color: #ffffff;
     font-size: 20px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
 }
 .inicio-contenido p {
     font-size: 16px;
     margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
 }
 .btn {
     display: inline-block;
@@ -92,11 +101,21 @@ body{
     text-decoration: none;
     font-weight: 600;
     transition: .5s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
 }
 
 .btn:hover {
     background: transparent;
     color: #bd0000;
+}
+
+.redes-sociales{
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
 }
 .inicio-img{
     position: relative;
@@ -112,6 +131,9 @@ body{
     background: #000000;
     border: 25px solid #bd0000;
     box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 1.6s;
 }
 .inicio-img .rombo img {
     position: absolute;
@@ -119,6 +141,9 @@ body{
     left: -37px;
     max-width: 550px;
     transform: rotate(-45deg);
+    opacity: 0;
+    animation: t800 1s ease forwards;
+    animation-delay: 2s;
 
 }
 .inicio .rombo2{
@@ -131,10 +156,10 @@ body{
     transform: rotate(45deg);
     z-index: -1;
     box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
+    opacity: 0;
+    animation: rombo2 1s ease forwards;
+   
 
-
-
-    
 }
 .nosotros {
     position: relative;
@@ -145,13 +170,60 @@ body{
     align-items: center;
     padding: 10px 8% 0;
     overflow: hidden;
-}
+}  
 .nosotros h4{
     color: #bd0000;
     font-size: 30px;
     line-height: 1.2;
+    max-width: 650px;
+
 }
 .nosotros p {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+.historia {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8% 0;
+    overflow: hidden;
+}
+.historia h5{
+    color: #bd0000;
+    font-size: 30px;
+    line-height: 1.2;
+}
+.historia p {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+.contacto {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8% 0;
+    overflow: hidden;
+}
+.contacto h5{
+    color: #bd0000;
+    font-size: 30px;
+    line-height: 1.2;
+}
+.contacto h6{
+    color: #bd0000;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.contacto p {
     color: #ffffff;
     font-size: 16px;
     margin: 15px 0 30px;
@@ -171,11 +243,68 @@ body{
 
 @keyframes slideTop {
     0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+   
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px) ;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) ;
+        opacity: 1;
+    }
+   
+}
+
+@keyframes slideBottom {
+    0% {
         transform: translateY(-100px);
         opacity: 0;
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+   
+}
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+   
+}
+@keyframes t800 {
+    0% {
+        transform: translate(300px, -300px) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(-45deg);
+        opacity: 1;
+    }
+   
+}
+@keyframes rombo2 {
+    0% {
+        right: -40%;
+        opacity: 0;
+    }
+    100% {
+        right: -25%;
         opacity: 1;
     }
    
